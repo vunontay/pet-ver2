@@ -1,0 +1,18 @@
+@import "../abstracts/index.scss";
+
+.container {
+      max-width: 114rem;
+      margin: 0 auto;
+
+      @include breakpoint(xs) {
+            padding: 0 1.5rem;
+      }
+
+      @include breakpoint(sm) {
+            padding: 0 2rem;
+      }
+
+      @include breakpoint(xl) {
+            padding: 0;
+      }
+}

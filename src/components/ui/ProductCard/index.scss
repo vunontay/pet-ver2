@@ -1,0 +1,61 @@
+@import "../../../styles/abstracts";
+
+.card_product {
+
+      box-shadow: 0px 4px 28px -2px #00000014;
+
+      padding: 0.8rem 0.8rem 0 0.8rem;
+      border-radius: 1.2rem;
+      cursor: pointer;
+      margin: 0 1rem 2rem;
+
+      @include breakpoint(xs) {
+            width: 100%;
+      }
+
+      @include breakpoint(sm) {
+            width: calc(100% / 2 - 2rem);
+      }
+
+      @include breakpoint(md) {
+            width: calc(100% / 3 - 2rem);
+      }
+
+      @include breakpoint(lg) {
+            width: calc(100% / 4 - 2rem);
+      }
+
+
+
+      img {
+            width: 100%;
+      }
+
+      &_body {
+            padding: 1.8rem 0;
+
+            &_title {
+                  @include text($text, 700, 1.6rem, 2.4rem);
+                  margin-bottom: 0.6rem;
+            }
+
+            &_details {
+                  display: flex;
+                  margin-bottom: 0.6rem;
+
+                  &_product {
+                        @include text($gray_60, 500, 1.2rem, 1.8rem);
+                        margin-right: 1rem;
+                  }
+
+                  &_variants {
+                        @include text($gray_60, 500, 1.2rem, 1.8rem);
+                  }
+            }
+
+            &_price {
+                  @include text($text, 700, 1.4rem, 2rem);
+
+            }
+      }
+}

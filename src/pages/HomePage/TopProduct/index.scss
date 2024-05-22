@@ -1,0 +1,20 @@
+@import "../../../styles/abstracts";
+
+.section_top_product {
+      width: 100%;
+
+      &_header {
+            width: 100%;
+            @include flex(space-between, center, null, null);
+            margin-bottom: 5rem;
+
+            p {
+                  @include text($black, 500, 1.6rem, 2.4rem);
+            }
+
+            h2 {
+                  @include text($primary_color_1, 700, 2.4rem, 3.6rem);
+
+            }
+      }
+}

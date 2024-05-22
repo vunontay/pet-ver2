@@ -1,0 +1,138 @@
+@import "../../../styles/abstracts";
+
+.middle_banner {
+      margin-top: 10rem;
+
+      @include breakpoint(xs) {
+            height: 100vh;
+      }
+
+      @include breakpoint(sm) {
+            height: 100vh;
+      }
+
+      @include breakpoint(md) {
+            max-height: 38rem;
+      }
+
+      &_container {
+            position: relative;
+            width: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 2rem;
+            min-height: 38rem;
+
+            @include breakpoint(xs) {
+                  background-image: url("../../../assets/images/MiddleBannerMobile.png");
+                  height: 100%;
+            }
+
+            @include breakpoint(sm) {
+                  background-image: url("../../../assets/images/MiddleBannerMobile.png");
+                  height: 100%;
+            }
+
+            @include breakpoint(lg) {
+                  background-image: url("../../../assets/images/HeroBanner2.png");
+                  height: 100%;
+
+            }
+      }
+
+      &_wrapper {
+            min-height: 37.8rem;
+            @include position(absolute, 5%, 5%, null, null);
+
+            @include breakpoint(xs) {
+                  width: 100%;
+                  right: 0;
+                  padding: 0 2rem;
+            }
+
+            @include breakpoint(sm) {
+                  width: 100%;
+                  right: 0;
+                  padding: 0 2rem;
+            }
+
+            @include breakpoint(md) {
+                  width: 50%;
+                  right: 4%;
+            }
+
+            @include breakpoint(lg) {
+                  width: 40%;
+                  right: 4%;
+            }
+      }
+
+      img {
+            @include position(absolute, null, null, 0, null);
+
+            @include breakpoint(xs) {
+                  width: 100%;
+            }
+      }
+
+      &_content {
+
+
+            @include breakpoint(xs) {
+                  padding: 0;
+                  text-align: center;
+            }
+
+            @include breakpoint(sm) {
+                  padding: 0;
+                  text-align: center;
+            }
+
+
+      }
+
+      &_main_title {
+
+
+            @include breakpoint(xs) {
+                  @include text($primary_color_1, 800, 4.6rem, 4.6rem);
+
+            }
+
+            @include breakpoint(sm) {
+                  @include text($primary_color_1, 800, 4rem, 5.6rem);
+
+            }
+
+            @include breakpoint(md) {
+                  @include text($primary_color_1, 800, 4.6rem, 5.2rem);
+
+            }
+      }
+
+      &_sub_title {
+
+            @include breakpoint(xs) {
+                  @include text($primary_color_1, 800, 3rem, 3.2rem);
+
+            }
+
+            @include breakpoint(sm) {
+                  @include text($primary_color_1, 800, 3.2rem, 4.6rem);
+
+            }
+
+
+
+            margin-bottom: 2rem;
+      }
+
+      &_description {
+            @include text($primary_color_3, 500, 1.2rem, 1.8rem);
+            margin-bottom: 3rem;
+      }
+
+      &_btn {
+            @include flex(flex-end, null, null, 1.5rem);
+      }
+}

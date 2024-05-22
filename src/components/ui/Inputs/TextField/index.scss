@@ -1,0 +1,68 @@
+@import "../../../../styles/abstracts";
+
+.textfield {
+      border: none;
+      position: relative;
+      width: 100%;
+
+      &_label {
+            display: block;
+            cursor: pointer;
+            @include text($primary_color_2, 500, 1.4rem, 2rem);
+            margin-bottom: 0.6rem;
+            text-transform: capitalize;
+
+            small {
+                  @include text($primary_color_2, 500, 1.4rem, 2rem);
+            }
+      }
+
+      input {
+
+            border-radius: 0.8rem;
+            border: 0.1rem solid $gray_40;
+            @include transition(border-color 0.1s ease-out);
+            width: 100%;
+            padding: 1.4rem 1.6rem 1.4rem 2.8rem;
+            outline: none;
+
+            &:focus-within {
+                  border-color: $primary_color_2;
+            }
+
+            &::placeholder {
+                  color: $gray_40;
+            }
+      }
+
+      &_content {
+            @include flex(null, center, null, null);
+            position: relative;
+
+            &_icon {
+                  &.show-password {
+                        @include position(absolute, null, 0, null, null);
+                        margin-right: 2.8rem;
+                        cursor: pointer;
+                  }
+            }
+      }
+
+      &.error {
+            input {
+                  border-color: $error;
+            }
+      }
+
+
+      &.success {
+            input {
+                  border-color: $success;
+                  padding-right: 40px;
+            }
+      }
+
+      &_error {
+            @include text($error, 400, 1.2rem, 1.8rem);
+      }
+}

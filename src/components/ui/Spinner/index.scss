@@ -1,0 +1,38 @@
+@import "../../../styles/abstracts/";
+
+.spinner-container {
+      position: fixed;
+      top: 0;
+      right: 0;
+}
+
+.spinner-icon {
+      margin-right: 0.5rem;
+      height: 2rem;
+      width: 2rem;
+      animation: spin 1s linear infinite;
+      fill: #2563eb;
+      color: #edf2f7;
+}
+
+.spinner-icon.dark {
+      color: #718096;
+}
+
+@keyframes spin {
+      to {
+            transform: rotate(360deg);
+      }
+}
+
+.sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+}

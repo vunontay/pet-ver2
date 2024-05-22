@@ -1,0 +1,106 @@
+@import "../../../styles/abstracts";
+
+.nav {
+      @include box(100%, 9.6rem);
+
+
+      &_container {
+            @include box(100%, 100%);
+            @include flex(space-between, center, null, null);
+      }
+
+      &_left {
+            @include flex(null, center, null, 4.8rem);
+
+
+      }
+
+      &_logo {
+            margin-right: 3rem;
+
+            img {
+                  @include box(100%, 100%);
+            }
+      }
+
+      &_list {
+
+            @include breakpoint(xs) {
+                  display: none;
+            }
+
+            @include breakpoint(sm) {
+                  display: none;
+            }
+
+            @include breakpoint(lg) {
+                  @include flex(null, center, null, 4.8rem);
+            }
+
+      }
+
+      .menubar_icon {
+            @include text($primary_color_1, null, 3rem, 1);
+            cursor: pointer;
+            transition: $hover_transition;
+
+            &:hover {
+                  color: $secondary_color_1;
+            }
+
+            @include breakpoint(xs) {
+                  display: block;
+            }
+
+            @include breakpoint(sm) {
+                  display: block;
+            }
+
+            @include breakpoint(lg) {
+                  display: none;
+            }
+      }
+
+      &_list_icon {
+
+
+            @include breakpoint(xs) {
+                  display: none;
+            }
+
+            @include breakpoint(sm) {
+                  display: none;
+            }
+
+            @include breakpoint(lg) {
+                  @include flex(null, center, null, 2.4rem);
+            }
+
+
+            &_item {
+                  cursor: pointer;
+                  @include text($primary_color_1, null, 2.4rem, 1);
+
+                  svg {
+                        @include box(100%, 100%);
+                  }
+
+                  transition: $hover_transition;
+
+                  &:hover {
+                        color: $secondary_color_1;
+                  }
+
+                  img {
+                        @include box(2.4rem, 2.4rem);
+                        object-fit: cover;
+                  }
+            }
+      }
+
+      &_link {
+            @include text($primary_color_1, 600, null, null);
+
+      }
+
+}

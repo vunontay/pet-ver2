@@ -1,0 +1,68 @@
+@import "../../../../styles/abstracts/";
+
+.login {
+
+      width: 100%;
+      overflow-y: scroll;
+      max-height: 80vh;
+      scrollbar-width: none;
+
+      &_header {
+            padding: 2.5rem 0;
+            color: $black;
+            text-align: center;
+            text-transform: capitalize;
+            border-bottom: 0.1rem solid $gray_20;
+            margin-bottom: 2.5rem;
+
+            h3 {
+                  text-decoration: underline;
+                  margin-bottom: 0.5rem;
+                  @include text($black, 700, 2.6rem, 1);
+            }
+      }
+
+
+      .alert {
+            text-align: center;
+            margin-bottom: 2rem;
+            @include text($white, 400, 1.2rem, 1);
+            padding: 1rem 3rem;
+
+            &.alert-danger {
+                  background: $error;
+            }
+
+            &.alert-success {
+                  background: $success;
+            }
+      }
+
+
+      &_submit {
+            margin-top: 2.5rem;
+            width: 100%;
+      }
+
+      &_bottom {
+            @include flex(space-between, center, null, null);
+            @include text($gray_60, 500, 1.4rem, 1);
+            margin-top: 2.5rem;
+
+            a {
+                  font-weight: 600;
+                  color: $primary_color_1;
+                  text-transform: capitalize;
+                  text-decoration: underline
+            }
+      }
+
+      .form_row-2 {
+            @include flex(space-between, center, null, 1rem);
+
+            @include breakpoint(xs) {
+                  flex-wrap: wrap;
+                  width: 100%;
+            }
+      }
+}

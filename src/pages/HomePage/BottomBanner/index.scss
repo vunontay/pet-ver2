@@ -1,0 +1,42 @@
+@import "../../../styles/abstracts";
+
+.bottom_banner {
+      margin-top: 10rem;
+
+      &_container {
+            width: 100%;
+            background-image: url("../../../assets/images/BottomBanner.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 2rem;
+      }
+
+      &_wrapper {
+            min-height: 37.8rem;
+            @include flex(null, center, null, null);
+      }
+
+      &_content {
+            text-align: left;
+            padding: 0 6rem;
+            width: 50%;
+      }
+
+      &_main_title {
+            @include text($primary_color_1, 800, 5.2rem, 6.8rem);
+      }
+
+      &_sub_title {
+            @include text($primary_color_2, 700, 3.6rem, 5.4rem);
+            margin-bottom: 2rem;
+      }
+
+      &_description {
+            @include text($primary_color_3, 500, 1.2rem, 1.8rem);
+            margin-bottom: 3rem;
+      }
+
+      &_btn {
+            @include flex(flex-start, null, null, 1.5rem);
+      }
+}

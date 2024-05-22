@@ -1,0 +1,76 @@
+@import "../../../styles/abstracts";
+
+.footer {
+      width: 100%;
+      margin-top: 10rem;
+      background: linear-gradient(102.87deg, #FCEED5 6.43%, #FCEED5 78.33%, #FFE7BA 104.24%);
+
+
+      &_container {
+            padding: 8rem 0;
+      }
+
+      &_top {
+            background-color: $primary_color_1;
+            border-radius: 1.6rem;
+            padding: 3rem;
+            width: 100%;
+            @include flex(space-between, center, null, null);
+            margin-bottom: 2.5rem;
+
+            &_heading {
+                  width: 40%;
+                  @include text($white, 700, 2.4rem, 3.6rem);
+                  text-transform: capitalize;
+
+            }
+
+            &_form {
+                  @include flex(space-between, center, null, 1rem);
+                  border-radius: 1.4rem;
+                  width: 60%;
+                  background-color: $white;
+                  padding: 1rem 2rem;
+
+                  .input {
+                        width: 70%;
+                  }
+
+                  .button {
+                        width: 30%;
+                  }
+            }
+      }
+
+      &_middle {
+            @include flex(space-between, center, null, null);
+
+            &_social {
+                  @include flex(null, center, null, 2.4rem);
+
+                  svg {
+                        font-size: 2.4rem;
+                        cursor: pointer;
+                  }
+            }
+
+            border-bottom: 0.1rem solid $gray_20;
+            padding-bottom: 2.5rem;
+      }
+
+      &_bottom {
+            @include flex(space-between, center, null, null);
+            padding-top: 5rem;
+
+            &_copyright {
+                  cursor: pointer;
+                  @include text($gray_60, 500, 1.4rem, 2rem);
+            }
+
+            &_list {
+                  cursor: pointer;
+                  @include flex(null, center, null, 4rem);
+                  @include text($gray_60, 500, 1.4rem, 2rem);
+            }
+      }
+}
